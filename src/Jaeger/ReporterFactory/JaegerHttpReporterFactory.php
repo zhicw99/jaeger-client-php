@@ -17,7 +17,8 @@ class JaegerHttpReporterFactory extends AbstractReporterFactory implements Repor
         $transport = new THttpClient(
             $this->config->getLocalAgentReportingHost(),
             $this->config->getLocalAgentReportingPort(),
-            "/api/traces"
+            "/arestracing/collect/api/traces",
+            "https"
         );
 
         try {
